@@ -12,14 +12,12 @@ public class ReviewService implements IReviewService {
     ReviewRepository reviewRepository;
 
     @Override
-    public Review addReview(Review review, Long bookId) {
-        review.setBookId(bookId);
+    public Review addReview(Review review) {
         return reviewRepository.save(review);
     }
 
     @Override
-    public Review updateReview(Review review, Long bookId) {
-        review.setBookId(bookId);
+    public Review updateReview(Review review) {
         return reviewRepository.save(review);
     }
 

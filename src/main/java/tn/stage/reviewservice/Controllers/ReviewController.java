@@ -12,14 +12,14 @@ public class ReviewController {
     @Autowired
     IReviewService reviewService;
 
-    @PostMapping("/addReview/{bookId}")
-    public Review addReview(@RequestBody Review review, @PathVariable Long bookId) {
-        return reviewService.addReview(review, bookId);
+    @PostMapping("/addReview")
+    public Review addReview(@RequestBody Review review) {
+        return reviewService.addReview(review);
     }
 
     @PutMapping("/updateReview/{bookId}")
-    public Review updateReview(@RequestBody Review review, @PathVariable Long bookId) {
-        return reviewService.updateReview(review, bookId);
+    public Review updateReview(@RequestBody Review review) {
+        return reviewService.updateReview(review);
     }
 
     @GetMapping("/retreiveAllReviews")
@@ -37,8 +37,14 @@ public class ReviewController {
         reviewService.deleteReview(id);
     }
 
-    @GetMapping("/book/{bookId}")
+    /*@GetMapping("/book/{bookId}")
+    public List<Review> getReviewsByBookId(@PathVariable Long bookId) {
+        return reviewService.retreiveReviewsByBookId(bookId);
+    }*/
+
+    @GetMapping("/retrieveByBook/{bookId}")
     public List<Review> getReviewsByBookId(@PathVariable Long bookId) {
         return reviewService.retreiveReviewsByBookId(bookId);
     }
+
 }

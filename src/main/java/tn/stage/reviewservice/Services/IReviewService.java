@@ -4,8 +4,8 @@ import java.util.List;
 
 public interface IReviewService {
 
-    public Review addReview(Review review, Long bookId);
-    public Review updateReview(Review review, Long bookId);
+    public Review addReview(Review review);
+    public Review updateReview(Review review);
     public void deleteReview(Long id);
     public List<Review> retreiveAllReviews();
     public Review retreiveReview(long id);
