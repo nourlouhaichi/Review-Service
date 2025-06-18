@@ -1,5 +1,4 @@
 package tn.stage.reviewservice.Entities;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.Date;

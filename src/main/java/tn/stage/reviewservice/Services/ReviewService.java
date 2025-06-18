@@ -40,4 +40,5 @@ public class ReviewService implements IReviewService {
     public List<Review> retreiveReviewsByBookId(Long bookId) {
         return reviewRepository.findByBookId(bookId);
     }
+
 }

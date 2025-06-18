@@ -37,11 +37,6 @@ public class ReviewController {
         reviewService.deleteReview(id);
     }
 
-    /*@GetMapping("/book/{bookId}")
-    public List<Review> getReviewsByBookId(@PathVariable Long bookId) {
-        return reviewService.retreiveReviewsByBookId(bookId);
-    }*/
-
     @GetMapping("/retrieveByBook/{bookId}")
     public List<Review> getReviewsByBookId(@PathVariable Long bookId) {
         return reviewService.retreiveReviewsByBookId(bookId);
