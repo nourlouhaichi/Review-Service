@@ -15,7 +15,8 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long idReview;
     String comment;
-    int rating;
+    String type;
+    int page;
     @Column
     @Temporal(TemporalType.TIMESTAMP)
     Date created;
